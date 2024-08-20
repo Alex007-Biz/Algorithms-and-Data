@@ -24,3 +24,7 @@ stack.push(3)
 
 print(stack.is_empty())
 print(stack.peek())
+print(stack.pop())
+print(stack.pop())
+
+print(stack.peek())
