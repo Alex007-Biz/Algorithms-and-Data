@@ -14,8 +14,13 @@ def insert(root, key):
             root.left = insert(root.left, key)
     return root
 
-root = Node(70)
+def inorder_traversal(root):
+    if root is not None:
+        inorder_traversal(root.left)
+        print(root.value, end=' ')
+        inorder_traversal(root.right)
 
+root = Node(70)
 root = insert(root, 30)
 root = insert(root, 56)
 root = insert(root, 89)
@@ -24,3 +29,6 @@ root = insert(root, 68)
 root = insert(root, 73)
 root = insert(root, 98)
 root = insert(root, 84)
+
+print("Итоговое BST в симметричном порядке:")
+inorder_traversal(root)
